@@ -294,11 +294,11 @@ X has 6 features, but model expects 8
 
 ## 📊 Resultado Final:
 
-✔️ API funcionando em produção.
-✔️ Predição com Machine Learning.
-✔️ Persistência no DynamoDB.
-✔️ Infraestrutura como código.
-✔️ Deploy automatizado com Docker.
+* API funcionando em produção.
+* Predição com Machine Learning.
+* Persistência no DynamoDB.
+* Infraestrutura como código.
+* Deploy automatizado com Docker.
 
 ---
 
