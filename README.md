@@ -3,6 +3,7 @@
 ## 📌 Sobre o Projeto.
 
 Este projeto foi desenvolvido como parte de um case técnico para vaga de Machine Learning Jr, com o objetivo de construir uma API completa para predição de sobrevivência de passageiros do Titanic, utilizando arquitetura serverless na AWS.
+
 A solução implementa desde o modelo de Machine Learning até o deploy em produção utilizando boas práticas de engenharia de dados e infraestrutura como código.
 
 ---
@@ -120,6 +121,56 @@ Consulta um passageiro específico.
 ### 🔹 DELETE /sobreviventes/{id}
 
 Remove um registro do banco.
+
+---
+
+## 🔗 URL da API em Produção
+
+Após o deploy no API Gateway, a API ficou disponível publicamente no seguinte endpoint:
+
+```bash
+https://frifupezv0.execute-api.us-east-1.amazonaws.com/dev
+```
+
+---
+
+## 🧪 Como testar a API
+
+Abaixo estão exemplos reais de uso dos endpoints.
+
+---
+
+### 🔹 POST /sobreviventes
+
+```bash
+POST https://frifupezv0.execute-api.us-east-1.amazonaws.com/dev/sobreviventes
+```
+
+Body:
+
+```json
+{
+  "data": [[22, 0, 0, 1, 1, 3, 7.25, 0]]
+}
+```
+
+---
+
+### 🔹 GET /sobreviventes
+
+```bash
+GET https://frifupezv0.execute-api.us-east-1.amazonaws.com/dev/sobreviventes
+```
+
+---
+
+### 🔹 DELETE /sobreviventes/{id}
+
+```bash
+DELETE https://frifupezv0.execute-api.us-east-1.amazonaws.com/dev/sobreviventes/{id}
+```
+
+Substitua `{id}` pelo identificador retornado no POST.
 
 ---
 
