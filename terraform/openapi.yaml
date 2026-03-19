@@ -1,0 +1,76 @@
+openapi: 3.0.1
+info:
+  title: Titanic Survival API
+  version: "1.0"
+
+paths:
+  /sobreviventes:
+    post:
+      summary: Escora passageiros
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                data:
+                  type: array
+                  items:
+                    type: array
+                    items:
+                      type: number
+      responses:
+        "200":
+          description: Sucesso
+      x-amazon-apigateway-integration:
+        payloadFormatVersion: "2.0"
+        type: aws_proxy
+        httpMethod: POST
+        uri: "${lambda_invoke_arn}"
+
+    get:
+      summary: Lista passageiros avaliados
+      responses:
+        "200":
+          description: Sucesso
+      x-amazon-apigateway-integration:
+        payloadFormatVersion: "2.0"
+        type: aws_proxy
+        httpMethod: POST
+        uri: "${lambda_invoke_arn}"
+
+  /sobreviventes/{id}:
+    get:
+      summary: Busca um passageiro por ID
+      parameters:
+        - name: id
+          in: path
+          required: true
+          schema:
+            type: string
+      responses:
+        "200":
+          description: Sucesso
+      x-amazon-apigateway-integration:
+        payloadFormatVersion: "2.0"
+        type: aws_proxy
+        httpMethod: POST
+        uri: "${lambda_invoke_arn}"
+
+    delete:
+      summary: Deleta um passageiro por ID
+      parameters:
+        - name: id
+          in: path
+          required: true
+          schema:
+            type: string
+      responses:
+        "200":
+          description: Sucesso
+      x-amazon-apigateway-integration:
+        payloadFormatVersion: "2.0"
+        type: aws_proxy
+        httpMethod: POST
+        uri: "${lambda_invoke_arn}"
