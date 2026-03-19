@@ -302,7 +302,7 @@ X has 6 features, but model expects 8
 
 ---
 
-## 📈 Melhorias Futuras:
+## 📈 Melhorias em andamento:
 
 * Validação automática das features.
 * Pipeline de treinamento.
